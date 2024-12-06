@@ -37,7 +37,6 @@ function Home()
         <>
         <div>
             <h1>Home</h1>
-            <p>Hello from React!</p>
             <button onClick={getMessage}>Check server response</button>
             {message && <p>{message}</p>}
         </div>
