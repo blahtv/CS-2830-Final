@@ -13,18 +13,32 @@ const corsOptions = {
 
 app.use(express.json());
 
+
+const db = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    database:'flight_info'
+})
+
+db.connect(err =>{
+    if(err) console.log(err);
+    console.log("Connected to mySQL database");
+})
+
 app.get('/message', (req, res) => {
-    res.json({ message: "Hello from Server!" });
+    res.json({ message: "Server Online" });
 }); //Send to frontend component "Home" at route /message
 
 
-app.get('/api/data/10', (req, res) => {
-    res.json({ message: "Bonjour!" });
-}); //Send to frontend component "FlightInfo" at route /api/data/10
-
-app.get('/api/data/20', (req, res) => {
-    res.json({ message: "Hola!" });
-}); //Send to frontend component "FlightInfo" at route /api/data/20
+app.get('/api/data/:id', (req,res) => {
+    console.log("searching database");
+    const {id} = req.params;
+    const query = 'SELECT * FROM flights WHERE id = ?';
+    db.query(query, [id], (err,results) => {
+        if(err) console.log(err);
+        else res.json(results.length ? results[0] : {error: "No entry found"});
+    });
+}); //Send database information to frontend component "FlightInfo" at route /flight
 
 app.listen(8000, () => {
     console.log(`Server is running on port 8000.`);

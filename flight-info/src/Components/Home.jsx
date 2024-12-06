@@ -25,6 +25,8 @@ function Home()
     const fetchEntry = async ()=>{
         try{
             const response = await axios.get('http://localhost:8000/api/data/' + inputValue);
+            if(response.data.hasOwnProperty("error"))
+                throw new Error('Flight ID not found');
             navigate('/flight', {state: {data: response.data}})
         }
         catch(err){

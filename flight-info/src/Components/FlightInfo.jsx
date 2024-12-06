@@ -16,7 +16,13 @@ function FlightInfo()
     <>
     <div>
         <h1>Flight Information</h1>
-        {data.message && <p>{data.message}</p>}
+        {data && 
+        <>
+        <h2>Flight Id: {data.id}</h2>
+        <p>Depature Location: {data.departure_loc}</p>
+        <p>Arrival Location: {data.arrival_loc}</p>
+        </>
+        }
     </div>
     <div>
         <button onClick={returnToHome}>Go Back</button>
