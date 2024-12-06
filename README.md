@@ -26,6 +26,10 @@ Frontend
 2. Run `npm install`
 3. Run `npm start`
 
+Database:
+1. Run mySQL server on localhost port 3306.
+2. Run flight_info.sql to setup database schema, tables, and values.
+
 
 Usage:
 
