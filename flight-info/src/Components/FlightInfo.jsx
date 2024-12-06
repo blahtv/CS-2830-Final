@@ -18,9 +18,11 @@ function FlightInfo()
         <h1>Flight Information</h1>
         {data && 
         <>
-        <h2>Flight Id: {data.id}</h2>
+        <h2>Flight ID: {data.id}</h2>
         <p>Depature Location: {data.departure_loc}</p>
         <p>Arrival Location: {data.arrival_loc}</p>
+        <p>Depature Time: {new Date(data.depature_time).toLocaleDateString("en-us",{hour: "2-digit", minute: "2-digit"})}</p>
+        <p>Gate: {data.gate}</p>
         </>
         }
     </div>
