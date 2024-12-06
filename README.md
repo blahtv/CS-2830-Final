@@ -1,19 +1,37 @@
 
 Flight Info Project
 
-Overview
 The Flight Info Project is a full-stack web application designed to retrieve and display flight information. 
 It demonstrates the integration of React (frontend), Node.js (backend), and a MySQL database, with Axios handling API communication. 
 This project was bootstrapped using Create React App.
 
 
-Purpose of the Application
 The purpose of this application is to:
 
 Provide flight details based on user input.
 Showcase database integration to store and retrieve data dynamically.
 Create a fully functional single-page application (SPA) using React.
 Demonstrate backend and frontend interaction with RESTful APIs.
+
+
+Installation & Setup:
+
+Backend
+1. Navigate to /Backend
+2. Run `npm install`
+3. Run `npm run dev`
+
+Frontend
+1. Navigate to /flight-info
+2. Run `npm install`
+3. Run `npm start`
+
+
+Usage:
+
+To fetch a flight entry from the mySQL database, enter one of the following IDs into the input field and press the "Find Flight" button.
+This renders out a new Component showing the formatted database entry. To return to the Home Component, press the "Go Back" button.
+
 
 Development Details
 Technologies Used
