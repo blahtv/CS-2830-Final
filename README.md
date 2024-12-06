@@ -32,19 +32,11 @@ Database:
 
 MySQL: A relational database used to store flight data, accessible via the mysql2 package.
 
-Containerization:
-
-Docker: Used to containerize the application, ensuring consistent deployment environments.
-
 Files and Directory Structure
 
 Backend
 
 server.js: Entry point for the Node.js server, managing API endpoints.
-
-routes.js: Contains modularized backend routes for cleaner code.
-
-.env: Environment variables for database credentials and server configuration.
 
 Frontend
 
@@ -60,7 +52,6 @@ index.css: Styles for the application.
 
 Configuration
 
-Dockerfile: Docker configuration file for backend and frontend containers.
 package.json: Dependency and script management for the project.
 package-lock.json: Locks dependencies for consistent environments.
 
@@ -96,10 +87,3 @@ Database:
 
 MySQL database stores flight data.
 Queries to insert and retrieve data based on user input.
-
-Docker:
-
-Dockerized backend and frontend for consistent deployments.
-Configured with a docker-compose.yml file for seamless startup.
-
-
