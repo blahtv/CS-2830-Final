@@ -33,7 +33,7 @@ Database:
 
 Usage:
 
-To fetch a flight entry from the mySQL database, enter one of the following IDs into the input field and press the "Find Flight" button.
+To fetch a flight entry from the mySQL database, enter 1, 2, or 3 into the input field and press the "Find Flight" button.
 This renders out a new Component showing the formatted database entry. To return to the Home Component, press the "Go Back" button.
 
 
